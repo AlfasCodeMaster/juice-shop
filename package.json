@@ -204,9 +204,9 @@
     "@types/compression": "^1.7.x",
     "@types/cookie-parser": "^1.4.x",
     "@types/swagger-ui-express": "^4.1.x",
-    "@types/node": "^20.x"
-    "@cyclonedx/cyclonedx-npm": "^2.0.0||^3.0.0||^4.00",
-    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+"@types/node": "^20.x",
+"@cyclonedx/cyclonedx-npm": "^2.0.0||^3.0.0||^4.00",
+"@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/chai": "^4.3.20",
     "@types/clarinet": "^0.12.3",
     "@types/compression": "^1.8.1",
