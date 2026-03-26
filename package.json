@@ -189,6 +189,22 @@
     "z85": "^0.0.2"
   },
   "devDependencies": {
+
+    "@types/express": "^4.17.x",
+    "@types/config": "^3.3.x",
+    "@types/pug": "^2.0.x",
+    "@types/jsonwebtoken": "^9.0.x",
+    "@types/jws": "^3.2.x",
+    "@types/js-yaml": "^4.0.x",
+    "@types/i18n": "^0.13.x",
+    "@types/morgan": "^1.9.x",
+    "@types/multer": "^1.4.x",
+    "@types/serve-index": "^1.9.x",
+    "@types/body-parser": "^1.19.x",
+    "@types/compression": "^1.7.x",
+    "@types/cookie-parser": "^1.4.x",
+    "@types/swagger-ui-express": "^4.1.x",
+    "@types/node": "^20.x"
     "@cyclonedx/cyclonedx-npm": "^2.0.0||^3.0.0||^4.00",
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/chai": "^4.3.20",
