@@ -34,7 +34,7 @@ jobs:
       uses: anchore/sbom-action@bb716408e75840bbb01e839347cd213767269d4a
       with:
         image: "localbuild/testimage:latest"
-        artifact-name: image.spdx.json
+        artifact-name: imagespdxjson
         dependency-snapshot: true
   semgrep_scan:
     # User definable name of this GitHub Actions job.
@@ -56,27 +56,27 @@ jobs:
     steps:
       # Fetch project source with GitHub Actions Checkout.
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Perform Semgrep Analysis
       # @NOTE: This is the actual semgrep command to scan your code.
       # Modify the --config option to 'r/all' to scan using all rules,
       # or use multiple flags to specify particular rules, such as
       # --config r/all --config custom/rules
-        run: semgrep scan -q --sarif --config auto ./vulnerable-source-code > semgrep-results.sarif
+        run: semgrep scan -q --sarif --config auto ./vulnerable-source-code > semgrep-resultssarif
 
       # upload the results for the CodeQL GitHub app to annotate the code
       - name: Save SARIF results as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: semgrep-scan-results
-          path: semgrep-results.sarif
+          path: semgrep-resultssarif
 
       # Upload SARIF file generated in previous step
       - name: Upload SARIF result to the GitHub Security Dashboard
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: semgrep-results.sarif
+          sarif_file: semgrep-resultssarif
         if: always()
   detect-secrets:
       runs-on: ubuntu-latest
